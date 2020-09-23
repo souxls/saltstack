@@ -1,0 +1,4 @@
+[{{ module }}]
+path = {{ path }}
+auth users = {{ users }}
+host allow = {{ host }}
