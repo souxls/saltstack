@@ -1,0 +1,64 @@
+epel-release:
+  pkg.installed
+vim-enhanced:
+  pkg.installed
+OpenIPMI:
+  pkg.installed
+gcc:
+  pkg.installed
+traceroute:
+  pkg.installed
+dmidecode:
+  pkg.installed
+etckeeper:
+  pkg.installed
+aide:
+  pkg.installed
+man:
+  pkg.installed
+ipmitool:
+  pkg.installed
+telnet:
+  pkg.installed
+sysstat:
+  pkg.installed
+iptraf:
+  pkg.installed
+strace:
+  pkg.installed
+rsync:
+  pkg.installed
+openssh-clients:
+  pkg.installed
+ntp:
+  pkg.installed
+ntpdate:
+  pkg.installed
+bind-utils:
+  pkg.installed
+setools-console:
+  pkg.installed
+policycoreutils-python:
+  pkg.installed
+mailx:
+  pkg.installed
+net-snmp:
+  pkg.installed
+wget:
+  pkg.installed
+lrzsz:
+  pkg.installed
+lsof:
+  pkg.installed
+tcpdump:
+  pkg.installed
+tree:
+  pkg.installed
+salt-minion:
+  pkg.installed
+bc:
+  pkg.installed
+/web:
+  file.symlink:
+    - target: /export
+
