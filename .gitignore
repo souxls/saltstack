@@ -1,3 +1,4 @@
 *.bk
 *.bak
 *.gz
+templates/*
