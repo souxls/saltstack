@@ -1,0 +1,11 @@
+{
+    daily
+    copytruncate
+    rotate 30
+    notifempty
+    missingok
+    dateext
+    compress
+    delaycompress
+}
+

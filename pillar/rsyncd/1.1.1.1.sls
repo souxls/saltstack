@@ -1,5 +1,5 @@
 rsyncd:
-  10.3.246.99:
+  1.1.1.1:
     backup:
       user: www
       path: /web/aaa

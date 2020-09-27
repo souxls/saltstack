@@ -1,16 +1,16 @@
 iptables:
-  10.3.246.99:
+  1.1.1.1:
     http80:
       table: filter
       chain: INPUT
       jump: ACCEPT
-      source: '10.3.246.65/32'
+      source: '1.1.1.2/32'
       save: True
     http8080:
       table: filter
       chain: INPUT
       jump: ACCEPT
-      source: 10.3.246.99/32,10.3.246.65
+      source: 1.1.1.1/32,1.1.1.2
       match: tcp
       proto: tcp
       dports: 80,8181

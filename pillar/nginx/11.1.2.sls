@@ -1,8 +1,9 @@
 nginx:
-  10.3.246.99: 
-    test1.wanmei.com:
-      servername: test1.wanmei.com,test.wanmei.com
+  1.1.1.2: 
+    test1.test.com:
+      servername: test1.test.com,test.test.com
       upstream: 127.0.0.1:9090,127.0.0.1:9191
+      location: ''
       ext:
         client_body_buffer_size 128k,
         proxy_buffer_size       8k,
@@ -13,8 +14,8 @@ nginx:
         proxy_connect_timeout   120,
         proxy_send_timeout      120,
         proxy_read_timeout      120
-    test2.wanmei.com:
-      servername: test2.wanmei.com
+    test2.test.com:
+      servername: test2.test.com
       upstream: 127.0.0.1:9292
       location: 
         location /aa {,
@@ -24,11 +25,14 @@ nginx:
            deny all;,
            allow all;,
         }
-    cc.wanmei.com:
-      servername: cc.wanmei.com
+      ext: ''
+    cc.test.com:
+      servername: cc.test.com
+      location: ''
+      upstream: ''
       ext: proxy_redirect off,proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for
-    dd.wanmei.com:
-      servername: dd.wanmei.com
-    test5.wanmei.com:
-      port: 9999
-      upstream: 10.1.1.1:8443
+    dd.test.com:
+      servername: dd.test.com
+      upstream: ''
+      location: ''
+      ext: ''

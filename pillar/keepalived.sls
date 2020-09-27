@@ -1,5 +1,5 @@
 keepalived:
-  10.3.246.99:
+  1.1.1.1:
     router_id: testtest
     state: MASTER
     interface: eth0

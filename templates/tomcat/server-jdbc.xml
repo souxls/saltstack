@@ -1,0 +1,19 @@
+{% set id = grains['id'] %}
+{% for server in pillar['tomcat'][id] %}
+  {% if pillar['tomcat'][id][server]['namingresource'] is defined %}
+    {% for database in pillar['tomcat'][id][server]['namingresource'] %}
+    <Resource name="jdbc/{{ pillar['tomcat'][id][server]['namingresource'][database]['jdbc'] }}
+       auth="Container"
+       type="javax.sql.DataSource"
+       maxActive="100"
+       maxIdle="20"
+       username="{{ pillar['tomcat'][id][server]['namingresource'][database]['dbuser'] }}"
+       maxWait="3000"
+       driverClassName="org.gjt.mm.mysql.Driver"
+       password="{{ pillar['tomcat'][id][server]['namingresource'][database]['dbpassword'] }}"
+       url="jdbc:mysql://{{ pillar['tomcat'][id][server]['namingresource'][database]['dbhost'] }}/{{ pillar['tomcat'][id][server]['namingresource'][database]['dbname'] }}?useUnicode=true&amp;characterEncoding=UTF8"
+       removeAbandoned="true" removeAbandonedTimeout="5" logAbandoned="true"
+       testOnReturn="true" testWhileIdle="true"/>
+     {% endfor %}
+  {% endif %}
+{% endfor %}

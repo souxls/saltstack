@@ -1,0 +1,12 @@
+{{ log }}/*.log {
+        daily
+        missingok
+        rotate 30
+        compress
+        delaycompress
+        notifempty
+        sharedscripts
+        postrotate
+                [ -f /var/run/php5.4-fpm.pid ] && kill -USR2 `cat /var/run/php5.4-fpm.pid`
+        endscript
+}

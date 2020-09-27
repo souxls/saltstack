@@ -1,3 +1,3 @@
 zabbix:
-  Server: 10.131.43.2
-  ServerActive: 10.131.43.2
+  Server: 1.1.1.1
+  ServerActive: 1.1.1.1
